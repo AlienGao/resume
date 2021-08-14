@@ -28,6 +28,9 @@
                 {% if online %}
                 <dd><span>在线简历:</span> <a href="{{ online }}" target="_blank">{{ online }}</a></dd>
                 {% endif %}
+                {% if juejin %}
+                <dd><span>掘金:</span> <a href="{{ juejin }}" target="_blank">{{ juejin }}</a></dd>
+                {% endif %}
             </li>
             <li class="someRight">
                 <dt><i class="fa fa-bookmark"></i>Contact. 联系方式</dt>
@@ -71,16 +74,17 @@
     </div>
     <div class="main">
         <ul class="main-info">
-            <li class="skill">
-                <dt><i class="fa fa-bookmark"></i>Skill. 技能清单</dt>
-                {% for item in skill %}
+            <li class="experience">
+                <dt><i class="fa fa-bookmark"></i>工作经历</dt>
+                {% for item in work %}
                 <ul class="exp">
+                  <li>{{ item.Company |safe }}（{{ item.time |safe }}）</li>
                   <li>{{ item.des |safe }}</li>
                 </ul>
                 {% endfor %}
             </li>
             <li class="experience">
-                <dt><i class="fa fa-bookmark"></i>Experience. 项目经验</dt>
+                <dt><i class="fa fa-bookmark"></i>项目经验</dt>
                 {% for exp in experience %}
                     {% if exp.section == '个人项目' %}
                         <h2 class="exp-title">{{exp.section}}</h2>
@@ -91,6 +95,9 @@
                                 <h4>{{ item.name }} {{ item.date }}
                                 {% if item.website %}
                                 <a href="{{ item.website }}" target="_blank"><i class="fa fa-link"></i>Demo</a>
+                                {% endif %}
+                                {% if item.artical %}
+                                <a href="{{ item.artical }}" target="_blank"><i class="fa fa-link"></i>文章</a>
                                 {% endif %}
                                 {% if item.source_code %}
                                 <a href="{{ item.source_code }}" target="_blank"><i class="fa fa-link"></i>SourceCode</a>
@@ -134,6 +141,14 @@
                         </ul>
                     {% endif %}
                 
+                {% endfor %}
+            </li>
+            <li class="skill">
+                <dt><i class="fa fa-bookmark"></i>技能清单</dt>
+                {% for item in skill %}
+                <ul class="exp">
+                    <li>{{ item.des |safe }}</li>
+                </ul>
                 {% endfor %}
             </li>
         </ul>
