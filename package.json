@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
+    "deploy": "bash deploy.sh",
     "build": "NODE_ENV=production gulp",
     "public": "rimraf dist && npm run build && node public.js",
     "test": "echo \"Error: no test specified\" && exit 1"
