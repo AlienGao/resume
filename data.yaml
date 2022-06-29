@@ -71,13 +71,29 @@ experience: # 项目经验
         desc:
         project:
           -
-            name: 机房卫士
-            date: 2021.06-至今
+            name: 空调节能
+            date: 2022.04-2022.07
             website: 
             source_code: 
             img:
             des: !!md |
-              独立开发机房卫士前端页面，包括登录，审批，报警报表展示，用户管理等功能。
+              使用Echarts完成空调节能大屏图表展示
+          -
+            name: 绿色校园项目迁移至qiankun
+            date: 2022.02-2022.04
+            website: 
+            source_code: 
+            img:
+            des: !!md 
+              将空调和路灯模块使用qiankun重构   
+          -
+            name: 机房卫士
+            date: 2021.06-2022.01
+            website: 
+            source_code: 
+            img:
+            des: !!md |
+              独⽴开发机房卫⼠登录，审批，报警报表展⽰，⽤户管理，权限管理，实时视频监控等功能。
 
               基于React + Redux + React-Router + Antd Design搭建的前后端分离的 + Restful Api的后台管理系统。
       -
@@ -92,7 +108,7 @@ experience: # 项目经验
             source_code: 
             img:
             des: !!md |
-              1:期间经历过一次改版，从所有tab页放在一个父页面，到通过父子路由展示对应的tab页，从而实现从初版所有表单一起校验，到单页校验单页保存。因为表单的保存逻辑都类似，所以将通用的校验方法，保存，提交方法等提取出来，通过mixins引入各页面来进行优化。
+              1:期间经历过一次改版，从所有tab页放在一个父页面，到通过父子路由展示对应的tab页，从而实现从初版所有表单一起校验，到单页校验单页保存。
               
               2:期间做了几个重要的通用组件，包括文件上传组件(添加对上传文件的校验与限制)，图片预览组件(点击之后预览图片，其他格式文件则直接下载)，时间格式化展示组件等。
           -
@@ -125,6 +141,14 @@ experience: # 项目经验
   -
     section: 个人项目
     project:
+      -
+        name: express + mysql + vue登录模块
+        date: 2022.06
+        img:
+        website:
+        source_code: https://github.com/AlienGao/express--practice
+        des: !!md |
+          带有token验证的登录demo
       -
         name: leetcode
         date: 2021.07
